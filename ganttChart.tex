@@ -1,0 +1,63 @@
+\begin{ganttchart}[
+    vgrid,                                                 
+    bar/.append style={fill=red, blue, rounded corners=3pt},
+    milestone/.append style={fill=red}, 
+    milestone label font = \footnotesize,
+    vrule/.style={very thick, blue},
+    vrule label font=\bfseries,
+    y unit chart=0.72cm,
+    x unit =0.43cm,
+    canvas/.append style={draw=none}  
+    ]{1}{18}
+    \gantttitlelist{1,...,18}{1} 
+    % predefined colours:
+    \definecolor{green2}{RGB}{0, 255, 81}
+    \definecolor{green1}{RGB}{226, 255, 227}
+    \definecolor{green3}{RGB}{102, 176, 50}
+    \definecolor{darkblue}{RGB}{13, 0, 255}
+    \definecolor{lightblue}{RGB}{112, 105, 245}
+    \definecolor{darkgoldenrod1}{RGB}{255, 185, 13}
+    \\
+    \ganttbar[bar/.append style={fill=darkgoldenrod1}]{Temporibus autem quibusdam \fbox{PTM} \ \ \ }{1}{18}  
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D0.1}{0} 
+    \ganttmilestone[milestone/.append style={rounded corners = 3pt}]{}{3}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D0.2}{3} 
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D0.3}{9}   
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]   
+                                            {D0.4}{12}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]   
+                                            {D0.5}{18}
+    \\
+    \ganttbar[bar/.append style={fill=green1}]
+                                            {At vero  \fbox{WP1} \ \ \ }{1}{8} 
+    \ganttmilestone[inline=true]            {M1.1}{0}
+    \ganttmilestone[inline=true]            {M1.2}{3}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]                                                           
+                                            {D1}{8} \\
+    \ganttbar[bar/.append style={fill=green2}]   
+                                            {Lorem ipsum \fbox{WP2} \ \ \ }{4}{16} \ganttmilestone[inline=true, milestone inline label node/.append style={anchor=north}]
+                                            {M2}{8}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D2.1}{11}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D2.2}{16} 
+    \\
+    \ganttbar[bar/.append style={fill=green3}]
+                                            {Nam libero tempore \fbox{WP3} \ \ \ }{12}{18}
+    \ganttmilestone[inline=true, milestone inline label node/.append style={anchor=north}]
+                                            {M3.1}{11}
+    \ganttmilestone[inline=true]            {M3.2}{16}
+    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+                                            {D}{18} 
+    \\
+    \ganttbar[bar/.append style={fill=cyan}]{Itaque earum  \fbox{D\&C} \ \ \ }{1}{18}
+    \ganttmilestone[inline=true ]           {D4.1}{6}
+    \ganttmilestone[inline=true]            {D4.2}{13}
+    \ganttmilestone[inline=true]            {D4.3}{16}
+    \ganttlink{elem9}{elem11}
+    \ganttlink{elem10}{elem12}
+    \ganttlink{elem13}{elem16}
+\end{ganttchart}
