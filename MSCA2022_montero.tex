@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[compact]{titlesec}
 \usepackage[hang,flushmargin,stable]{footmisc}
 \usepackage[margin=24mm]{geometry}
@@ -52,7 +52,7 @@
 
 % Size
 \headheight=14pt
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{10pt}
 \titleformat*{\section}{\large}
 \titleformat*{\subsection}{\normalsize}
 \titleformat*{\subsubsection}{\normalsize}
@@ -64,21 +64,30 @@
 \allsectionsfont{\sffamily\bfseries\raggedright\color{royalblue}}
 \let\oldfootnotesize\footnotesize
 \newcommand{\highlight}[1]{\colorbox{gray!15}{\small{#1}}}
-\newcommand{\marginLeft}[1]{\reversemarginpar\marginnote{\rotatebox{90}{\sffamily\bfseries\color{royalblue}\large{\phantom{j}#1}}}}
+\newcommand{\marginLeft}[1]{\reversemarginpar\marginnote{\rotatebox{90}{\sffamily\bfseries\color{royalblue}{\phantom{j}#1}}}}
 \newcommand{\marginRight}[1]{\normalmarginpar\hspace{0pt}\marginpar{\rotatebox{0}{\sffamily\color{gray}\normalsize{#1}}}}
-\newcommand\colorrule{\vspace{4px}{\color{lightgray}\hrule}\vspace{4px}}
+\newcommand\colorrule{\vspace{2px}{\color{royalblue}\hrule}\vspace{2px}}
 
 % Bibliography
-%\bibliography{bibliography}
-%\usepackage[style=chem-acs,doi=false]{biblatex}
+
+
+ \usepackage[backend=biber,
+style=verbose,
+doi=false,isbn=false,url=false,eprint=false, giveninits=true,
+maxbibnames=4,
+sorting=nyt]{biblatex}
+\addbibresource{source/msca2022.bib}
+
+
+
 
 % Headers and Footers
 \renewcommand{\footnotesize}{\fontsize{8bp}{1em}\selectfont}
-\renewcommand{\cite}{\autocite} % citations in footnotes
+% \renewcommand{\cite}{\footcite}  %citations in footnotes
 % Explicitly set footnote font size to match call (i.e., 8pt).
 % Taken from http://tex.stackexchange.com/a/249422/84485
 \makeatletter
-\renewcommand\footnotesize{%
+\renewcommand\footnotesize{ %
    \@setfontsize\footnotesize\@ixpt{8}%
    \abovedisplayskip 8\p@ \@plus2\p@ \@minus4\p@
    \abovedisplayshortskip \z@ \@plus\p@
@@ -91,13 +100,23 @@
 }
 \makeatother
 
+\usepackage{fnpct}
+
+%\setfnpct{ranges=true}
+\AdaptNote\footcite{oo+m}[footnote]{%
+\setfnpct{dont-mess-around}%
+\IfNoValueTF{#1}
+{#NOTE{#3}}
+{\IfNoValueTF{#2}{#NOTE[#1]{#3}}{#NOTE[#1][#2]{#3}}}%
+}
+
 \hypersetup{
-    pdftitle={H2020-MSCA-IF-2020},    % title
-    pdfauthor={},
+    pdftitle={H2020-MSCA-IF-2022},    % title
+    pdfauthor={Antonio Montero},
     colorlinks=true,
-    citecolor=black,
-    linkcolor=black,
-    urlcolor=blue
+    citecolor=royalblue,
+    linkcolor=royalblue,
+    urlcolor=royalblue
   }
 
 % To correctly align fancy headers.
@@ -115,6 +134,60 @@
 \fancyfoot[R]{\small \color{gray}{\sffamily \thepage~of \pageref*{sec:textend} [B-1]}}
 \resetHeadWidth
 
+\input{source/authCmd}
+
+\usepackage[ shadow, colorinlistoftodos,textsize=tiny, obeyFinal]{todonotes}
+\setuptodonotes{fancyline, backgroundcolor=gray!10,bordercolor=gray}
+\newcommand{\missingref}[1][?]{\todo[color=gray!30]{Reference (#1)}}
+
+\newcommandx{\inline}[2][1=]{\todo[inline, #1]{#2}}
+
+ \newcommand{\primoz}[1]{\todo[color=red!25]{\textbf{Elías:} #1}}
+ \newcommand{\tero}[1]{\todo[color=blue!25]{\textbf{Tero:} #1}}
+
+\makeatletter
+    \providecommand\@dotsep{5}
+\makeatother
+
+
 \begin{document}
-\include{B1}
+
+%%%%%%%%%%%%%%%%%%
+%%% EXCELLENCE %%%
+%%%%%%%%%%%%%%%%%%
+
+\section{Excellence}
+\vspace{-6pt}
+\input{source/1.1_quality}
+\input{source/1.2_methodology}
+\input{source/1.3_training}
+
+% \newpage
+
+%%%%%%%%%%%%%%
+%%% IMPACT %%%
+%%%%%%%%%%%%%%
+
+\section{Impact}
+\label{sec:impact}
+\input{source/2.1_impactresearcher}
+\input{source/2.2_suitability}
+\input{source/2.3_impactmeasures}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% IMPLEMENTATION %%%
+%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Quality and Efficiency of the Implementation}
+\label{sec:implementation}
+
+\input{source/3.1_implementationworkplan}
+\input{source/3.2_implementationmangement}
+
+
+
+\label{sec:textend}
+
+
 \end{document}
