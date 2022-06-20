@@ -1,12 +1,13 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[compact]{titlesec}
 \usepackage[hang,flushmargin,stable]{footmisc}
-\usepackage[margin=24mm]{geometry}
+\usepackage[margin=24mm, left=2cm, right=2cm]{geometry}
 \usepackage[nohyperlinks,nolist]{acronym}
 \usepackage[T1]{fontenc}
+\usepackage{newtxtext}
 \usepackage[usenames,dvipsnames,table]{xcolor}
 \usepackage[utf8]{inputenc}
-\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{csquotes}
@@ -149,12 +150,13 @@ sorting=nyt]{biblatex}
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[C]{\small \color{gray}{\sffamily Abrr}}
-\fancyfoot[L]{\small \color{gray}{\sffamily Marie Sk\l{}odowska-Curie Postdoctoral Fellowship -- ProjectCode}}
+\fancyhead[C]{\small \color{gray}{\sffamily HORIZON-MSCA-2022-PF-01}}
+\fancyfoot[L]{\small \color{gray}{\sffamily Marie Sk\l{}odowska-Curie Postdoctoral Fellowship -- \ourp}}
 \fancyfoot[R]{\small \color{gray}{\sffamily \thepage~of \pageref*{sec:textend} [B-1]}}
 \resetHeadWidth
 
 \input{source/authCmd}
+\input{source/authorThm}
 
 \usepackage[ shadow, colorinlistoftodos,textsize=tiny, obeyFinal]{todonotes}
 \setuptodonotes{fancyline, backgroundcolor=gray!10,bordercolor=gray}
@@ -181,6 +183,7 @@ sorting=nyt]{biblatex}
 \input{source/1.1_quality}
 \input{source/1.2_methodology}
 \input{source/1.3_training}
+% \input{source/1.4_experience}
 
 % \newpage
 

@@ -2,8 +2,285 @@
 kile_livePreviewEnabled=true
 kile_livePreviewStatusUserSpecified=false
 kile_livePreviewTool=LivePreview-PDFLaTeX
-lastDocument=
+lastDocument=source/1.2_methodology.tex
+
+[document-settings,item:MSCA2022_montero.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/1.1_quality.tex]
+Bookmarks=390,171
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/1.2_methodology.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/1.3_training.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/1.4_experience.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/2.1_impactresearcher.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/2.2_suitability.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/2.3_impactmeasures.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/3.1_implementationworkplan.tex]
+Bookmarks=6
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/3.2_implementationmangement.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/authCmd.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/authorThm.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[document-settings,item:source/ganttChart.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=LaTeX
+Mode Set By User=false
+
+[item:MSCA2022_montero.tex]
+open=false
+order=0
 
 [item:msca2022.kilepr]
 open=false
 order=-1
+
+[item:source/1.1_quality.tex]
+open=true
+order=0
+
+[item:source/1.2_methodology.tex]
+open=true
+order=3
+
+[item:source/1.3_training.tex]
+open=true
+order=1
+
+[item:source/1.4_experience.tex]
+open=false
+order=1
+
+[item:source/2.1_impactresearcher.tex]
+open=false
+order=-1
+
+[item:source/2.2_suitability.tex]
+open=false
+order=-1
+
+[item:source/2.3_impactmeasures.tex]
+open=false
+order=-1
+
+[item:source/3.1_implementationworkplan.tex]
+open=false
+order=0
+
+[item:source/3.2_implementationmangement.tex]
+open=false
+order=-1
+
+[item:source/authCmd.tex]
+open=true
+order=2
+
+[item:source/authorThm.tex]
+open=false
+order=2
+
+[item:source/ganttChart.tex]
+open=false
+order=1
+
+[item:source/msca2022.bib]
+open=false
+order=-1
+
+[view-settings,view=0,item:MSCA2022_montero.tex]
+CursorColumn=29
+CursorLine=185
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,185,0,[,185,0,],185,1
+
+[view-settings,view=0,item:source/1.1_quality.tex]
+CursorColumn=18
+CursorLine=164
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,146,88,[,146,88,],146,88,a,171,0,b,390,121,c,390,121,d,390,121
+
+[view-settings,view=0,item:source/1.2_methodology.tex]
+CursorColumn=68
+CursorLine=87
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,84,0,[,84,0,],84,1
+
+[view-settings,view=0,item:source/1.3_training.tex]
+CursorColumn=31
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,0,0,[,0,0,],0,0
+
+[view-settings,view=0,item:source/1.4_experience.tex]
+CursorColumn=39
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,9,200,[,9,200,],9,232
+
+[view-settings,view=0,item:source/2.1_impactresearcher.tex]
+CursorColumn=79
+CursorLine=2
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,12,211,[,12,211,],12,211
+
+[view-settings,view=0,item:source/2.2_suitability.tex]
+CursorColumn=161
+CursorLine=11
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,11,3,[,11,3,],11,7
+
+[view-settings,view=0,item:source/2.3_impactmeasures.tex]
+CursorColumn=105
+CursorLine=7
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,7,104,[,7,104,],7,104
+
+[view-settings,view=0,item:source/3.1_implementationworkplan.tex]
+CursorColumn=156
+CursorLine=14
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,14,145,[,14,145,],14,155,a,6,0
+
+[view-settings,view=0,item:source/3.2_implementationmangement.tex]
+CursorColumn=0
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=
+
+[view-settings,view=0,item:source/authCmd.tex]
+CursorColumn=67
+CursorLine=88
+Dynamic Word Wrap=false
+JumpList=
+TextFolding=[]
+ViMarks=.,88,67,[,88,67,],88,67
+
+[view-settings,view=0,item:source/authorThm.tex]
+CursorColumn=19
+CursorLine=31
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,31,18,[,31,17,],31,18
+
+[view-settings,view=0,item:source/ganttChart.tex]
+CursorColumn=10
+CursorLine=40
+Dynamic Word Wrap=true
+JumpList=
+TextFolding=[]
+ViMarks=.,40,9,[,40,0,],40,9

@@ -1678,4 +1678,194 @@
   institution = {National University of Mexico},
   title       = {Chiral extensions of toroids},
   url         = {http://132.248.9.195/ptd2019/agosto/0794572/Index.html},
-  abstract    = {An abstract polytope is a combinatorial object that generalises geometric structures such as convex polytopes, tilings, maps on surfaces, among others. All such structures present an inductive nature: a polygon can be regarded as a family of line segments glued along their endpoints; a polyhedron can be understood as a family of polygons glued along their edges; a tiling of the space can be thought as a family of polyhedra glued along their faces, an so on. This inductive nature is still present in the abstract notion of a polytope and rises the \emph{extension problem}. Given an abstrac
+  abstract    = {An abstract polytope is a combinatorial object that generalises geometric structures such as convex polytopes, tilings, maps on surfaces, among others. All such structures present an inductive nature: a polygon can be regarded as a family of line segments glued along their endpoints; a polyhedron can be understood as a family of polygons glued along their edges; a tiling of the space can be thought as a family of polyhedra glued along their faces, an so on. This inductive nature is still present in the abstract notion of a polytope and rises the \emph{extension problem}. Given an abstract polytope $\cK$, does there exist an abstract polytope $\cP$ such that all the maximal facets of $\cP$ are isomorphic to $\cK$? In this work we explore the problem when strong symmetry conditions are imposed to $\cP$. In particular, we show some original construction of chiral extensions in the situation when $\cK$ is a tilling with cubes of the $n$-dimensional torus.},
+  file        = {:Montero_2019_ChiralExtensionsToroids_phdThesis.pdf:PDF},
+}
+
+@Article{SchulteWeiss_1994_ChiralityProjectiveLinear,
+  author       = {Schulte, Egon and Weiss, Asia Ivi\'c},
+  date         = {1994},
+  journaltitle = {Discrete Math.},
+  title        = {Chirality and projective linear groups},
+  doi          = {10.1016/0012-365X(94)90387-5},
+  issn         = {0012-365X},
+  number       = {1-3},
+  pages        = {221--261},
+  url          = {http://dx.doi.org/10.1016/0012-365X(94)90387-5},
+  volume       = {131},
+  file         = {:SchulteWeiss_1994_ChiralityProjectiveLinear.pdf:PDF},
+  fjournal     = {Discrete Mathematics},
+  mrclass      = {52B15 (51M20)},
+  mrnumber     = {1287736},
+  mrreviewer   = {P. McMullen},
+}
+
+@Online{Hartley_2006_AtlasSmallRegular,
+  author = {Hartley, Michael},
+  date   = {2006},
+  title  = {The Atlas of Small Regular Polytopes},
+  url    = {https://www.abstract-polytopes.com/atlas/},
+}
+
+@Online{Conder_2006_RegularOrientableMaps,
+  author = {Conder, Marston},
+  date   = {2006},
+  title  = {Regular orientable maps of genus 2 to 101},
+  url    = {https://www.math.auckland.ac.nz/~conder/RegularOrientableMaps101.txt},
+}
+
+@Online{Conder_2006_RegularNonOrientable,
+  author = {Conder, Marston},
+  date   = {2006},
+  title  = {Regular non-orientable maps of genus 2 to 202},
+  url    = {https://www.math.auckland.ac.nz/~conder/RegularNonorientableMaps202.txt},
+  note   = {Total number of maps in list below: 862},
+}
+
+@Online{Conder_2006_ChiralOrientablyRegular,
+  author = {Conder, Marston},
+  date   = {2006},
+  title  = {Chiral orientably-regular maps of genus 2 to 101},
+  url    = {https://www.math.auckland.ac.nz/~conder/ChiralMaps101.txt},
+  note   = {Total number of maps in list below: 594},
+}
+
+@Online{Conder_2011_RegularOrientableMaps,
+  author = {Conder, Marston},
+  date   = {2011},
+  title  = {Regular orientable maps of genus 2 to 301},
+  url    = {https://www.math.auckland.ac.nz/~conder/RegularOrientableMaps301.txt},
+  note   = {Total number of maps in list below: 15824},
+}
+
+@Online{Conder_2013_ChiralRotaryMaps,
+  author = {Conder, Marston},
+  date   = {2013},
+  title  = {Chiral rotary maps of genus 2 to 301},
+  url    = {https://www.math.auckland.ac.nz/~conder/ChiralMaps301.txt},
+  note   = {Total number of maps in list below: 3870},
+}
+
+@Online{Conder_2012_RegularNonOrientable,
+  author = {Conder, Marston},
+  date   = {2012},
+  title  = {Regular non-orientable maps of genus 2 to 602},
+  url    = {https://www.math.auckland.ac.nz/~conder/RegularNonorientableMaps602.txt},
+  note   = {Total number of maps in list below: 3260},
+}
+
+@Online{Conder_2012_RotaryMapsOn,
+  author = {Conder, Marston},
+  date   = {2012},
+  title  = {Rotary maps (on orientable or non-orientable surfaces) with up to 1000 edges},
+  url    = {https://www.math.auckland.ac.nz/~conder/RotaryMapsWithUpTo1000Edges.txt},
+}
+
+@Online{Conder_2012_RegularPolytopes2000,
+  author = {Conder, Marston},
+  date   = {2012},
+  title  = {Regular polytopes with up to 2000 flags},
+  url    = {https://www.math.auckland.ac.nz/~conder/RegularPolytopesWithFewFlags-ByOrder.txt},
+}
+
+@Online{Conder_2012_ChiralPolytopes2000,
+  author = {Conder, Marston},
+  date   = {2012},
+  title  = {Chiral polytopes with up to 2000 flags},
+  url    = {https://www.math.auckland.ac.nz/~conder/ChiralPolytopesWithFewFlags-ByOrder.txt},
+}
+
+@Online{LeemansLaurenceConnorMixerMulpas__AtlasPolytopesSmall,
+  author = {Leemans, Dimitri and Laurence, Vauthier and Connor, Thomas and Mixer, Mark and Mulpas, Jessica},
+  title  = {An Atlas of Polytopes for Small Almost Simple Groups},
+  url    = {https://leemans.dimitri.web.ulb.be/polytopes/index.html},
+}
+
+@Online{HartleyHubardLeemans__AtlasChiralPolytopes,
+  author = {Hartley, Michael and Hubard, Isabel and Leemans, Dimitri},
+  title  = {An Atlas of Chiral Polytopes for Small Almost Simple Groups},
+  url    = {https://leemans.dimitri.web.ulb.be/CHIRAL/index.html},
+}
+
+@Online{Potocnik_2014_CensusRegularMaps,
+  author = {Potočnik, Primož},
+  date   = {2014},
+  title  = {Census of regular maps},
+  url    = {https://www.fmf.uni-lj.si/~potocnik/work.htm},
+}
+
+@Online{Potocnik_2014_CensusChiralMaps,
+  author = {Potočnik, Primož},
+  date   = {2014},
+  title  = {Census of chiral maps},
+  url    = {https://www.fmf.uni-lj.si/~potocnik/work.htm},
+}
+
+@Online{Hartley_2006_AtlasSmallChiral,
+  author = {Hartley, Michael},
+  date   = {2006},
+  title  = {The Atlas of Small Chiral Polytopes},
+  url    = {https://www.abstract-polytopes.com/chiral/},
+}
+
+@Article{CollinsMontero_2021_EquivelarToroidsFew,
+  author       = {Collins, José and Montero, Antonio},
+  date         = {2021-01},
+  journaltitle = {Discrete \& Computational Geometry},
+  title        = {Equivelar {Toroids} with {Few} {Flag}-{Orbits}},
+  doi          = {10.1007/s00454-020-00230-y},
+  issn         = {1432-0444},
+  language     = {en},
+  number       = {2},
+  pages        = {305--330},
+  url          = {https://doi.org/10.1007/s00454-020-00230-y},
+  urldate      = {2021-02-18},
+  volume       = {65},
+  abstract     = {An \$\$(n+1)\$\$(n+1)-toroid is a quotient of a tessellation of the n-dimensional Euclidean space with a lattice group. Toroids are generalisations of maps on the torus to higher dimensions and also provide examples of abstract polytopes. Equivelar toroids are those that are induced by regular tessellations. In this paper we present a classification of equivelar \$\$(n+1)\$\$(n+1)-toroids with at most n flag-orbits; in particular, we discuss a classification of 2-orbit toroids of arbitrary dimension.},
+  file         = {:CollinsMontero_2021_EquivelarToroidsFew.pdf:PDF},
+  keywords     = {research},
+}
+
+@Article{GleasonHubard_2018_ProductsAbstractPolytopes,
+  author       = {Ian Gleason and Isabel Hubard},
+  date         = {2018-07},
+  journaltitle = {Journal of Combinatorial Theory, Series A},
+  title        = {Products of abstract polytopes},
+  doi          = {10.1016/j.jcta.2018.02.002},
+  pages        = {287--320},
+  volume       = {157},
+  file         = {:GleasonHubard_2018_ProductsAbstractPolytopes.pdf:PDF},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{GleasonHubard_2021_AntiprismAbstractPolytope,
+  author       = {Gleason, Ian and Hubard, Isabel},
+  date         = {2021-08},
+  journaltitle = {ARS MATHEMATICA CONTEMPORANEA},
+  title        = {The antiprism of an abstract polytope},
+  doi          = {10.26493/1855-3974.2584.68d},
+  issn         = {1855-3974},
+  language     = {en},
+  number       = {0},
+  url          = {https://amc-journal.eu/index.php/amc/article/view/2584},
+  urldate      = {2021-10-28},
+  abstract     = {Antiprisms of polygons are classical convex vertex-transitive polyhedra. In this paper, for any given (abstract) polytope, we define its antiprism. We then find the automorphism group of the antiprism of P in terms of the extended group of P (the groups of automorphisms and dualities) as well as some transitivity properties. We also give a relation between some products of abstract polytopes and their antiprisms.},
+  copyright    = {Copyright (c) 2021 ARS MATHEMATICA CONTEMPORANEA},
+  file         = {:GleasonHubard_2021_AntiprismAbstractPolytope.pdf:PDF},
+  keywords     = {Antiprism, abstract polytopes},
+}
+
+@PhdThesis{Mochan_2021_AbstractPolytopesTheir_PhDThesis,
+  author      = {Mochán, Elías},
+  date        = {2021},
+  institution = {National University of Mexico},
+  title       = {Abstract polytopes from their symmetry type graph},
+  url         = {http://132.248.9.195/ptd2021/abril/0810846/Index.html},
+  file        = {:Mochan_2021_AbstractPolytopesTheir_PhDThesis.pdf:PDF},
+}
+
+@MastersThesis{Montero_2013_PoliedrosRegularesEn,
+  author      = {Montero, Antonio},
+  date        = {2013},
+  institution = {UMSNH},
+  title       = {Poliedros regulares en el $3$-toro ({R}egular polyhedra

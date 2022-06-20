@@ -1,5 +1,5 @@
 %%% 1.2 METHODOLOGY %%%
-\subsection{Soundness of the proposed methodology (including interdisciplinary approaches, consideration of the gender dimension and other diversity aspects if relevant for the research project, and the quality of open science practices, including sharing and management of research outputs and engagement of citizens, civil society and end users, where appropriate)}
+\subsection{Soundness of the proposed methodology}
 \label{sec:methodology}
 % At a minimum, address the following aspects:
 %     • Overall methodology: Describe and explain the overall methodology, including the concepts, models and assumptions that underpin your work. Explain how this will enable you to deliver your project’s objectives. Refer to any important challenges you may have identified in the chosen methodology and how you intend to overcome them.
@@ -11,22 +11,115 @@
 %
 % Open science practices: Describe how appropriate open science practices are implemented as an integral part of the proposed methodology. Show how the choice of practices and their implementation is adapted to the nature of your work in a way that will increase the chances of the project delivering on its objectives [e.g. up to 1/2 page, including research data management]. If you believe that none of these practices are appropriate for your project, please provide a justification here.
 %
-% Open science is an approach based on open cooperative work and systematic sharing of knowledge and tools as early and widely as possible in the process. Open science practices include early and open sharing of research (for example through pre-registration, registered reports, pre-prints, or crowd-sourcing); research output management; measures to ensure reproducibility of research outputs; providing open access to research outputs (such as publications, data, software, models, algorithms, and workflows); participation in open peer-review; and involving all relevant knowledge actors including citizens, civil society and end users in the co-creation of R&I agendas and contents (such as citizen science).
+% Open science isan approach based on open cooperative work and systematic sharing of knowledge and tools as early and widely as possible in the process. Open science practices include early and open sharing of research (for example through pre-registration, registered reports, pre-prints, or crowd-sourcing); research output management; measures to ensure reproducibility of research outputs; providing open access to research outputs (such as publications, data, software, models, algorithms, and workflows); participation in open peer-review; and involving all relevant knowledge actors including citizens, civil society and end users in the co-creation of R&I agendas and contents (such as citizen science).
 %
 %     • Please note that this does not refer to outreach actions that may be planned as part of the communication, dissemination and exploitation activities. These aspects should instead be described below under ‘Impact’.
 %
 %     • Research data management and management of other research outputs: Applicants generating/collecting data and/or other research outputs (except for publications) during the project must explain how the data will be managed in line with the FAIR principles (Findable, Accessible, Interoperable, Reusable).
 %     • For guidance on open science practices and research data management, please refer to the relevant section of the HE Programme Guide on the Funding & Tenders Portal.
 
-The nature of our project involves a two way flow of knowledge between from discrete mathematics and group theory to the development of computational tools and data management. In order to build new data sets of abstract polytopes we need computational-efitient ways to compute and storage property of such objects and the other way around, if we want to OURPROJECT to eventually becomes a useful tool on theoretical research we need to develop ways to access and present the computed information in a user friendly way. We describe our proposed metodology from this two complementary approaches.
 
-Mathematical representation of highly symmetric abstract polytopes.
+% The nature of our project involves a two way flow of knowledge between from theoretical mathematics to the development of computational tools and data management.
+\marginLeft{Overall methodology}
+The nature of the research on symmetries of abstract polytopes sits in the interplay between combinatorics, group theory, geometry and topology.
+In order to build new datasets of abstract polytopes we need computational efficient ways to compute and storage  such objects and the other way around: from analysing new datasets we can identify patterns, formulate new conjectures and eventually develop new theoretical constructions.
 
-Abrstract polytopes as posets. The original definition of an abstract polytope is on the form of a poset [REF]. It makes sense from an hystorical view point. They are intendet to be combinatorial generalisation of the (geometric) convex polytopes. This generalisation was obtained by taking some of the properties of the face lattice of a convex polytope and use them as defining properties of an abstract polytope. Unfortunatelly, the computational cost and the combinatorial problem of storaging a poset seems to be very inneficient. Moreover, modern computer algebra systems do not have particullarly efficient tools to deal with posets. We should try to avoid representing abstract polytopes as parially ordered sets.
+In the following paragraphs we present some techniques and methodologies to build highly symmetric abstract polytopes and hence, datasets of such.
 
-Abstract polytopes from their automorphism group. Most likely this is the most exploided representation of an abstract polytopes. When an abstract polytope has a high degree of symmetry its automorphism group contains many combinatorial information of the poltyope. In particular, regular polytopes are incorrespondence with string C-groups [REF!], which are smoot quotient of Coxeter groups satisfying certain interection property. This fact has been strongly used to build the existing datasets mentioned in Section 1.1. The census [CONDER] was built by computing all possible normal subgroups of index at most 2000 of the universal string Coxeter group. This approach is computational expensive but it has the advantage that the computations have to be done only once. It might be worthy to try an push
+% \subsubsection*{Mathematical representation of highly symmetric abstract polytopes.}
+
+% \paragraph{Abstract polytopes, the original idea}
+
+% The originaldefinition of an abstract polytope is on the form of a poset .
+% This definition is a direct combinatorial generalisation of the (geometric) convex polytopes and  was obtained by taking some of the properties of the face lattice of a convex polytope and use them as defining properties of an abstract polytope.
+% However, usually storing an abstract polytopes as a poset is redundant and inefficient.
+% We describe below some other ways of representing a highly symmetric polytope and briefly describe how they could be useful in our objectives.
+
+% \marginLeft{Methods to persue the RO}
+\paragraph{Abstract polytopes from their automorphism group.}
+Automorphism groups of regular and chiral polytopes have been characterised \footcite{DanzerSchulte_1982_RegulareInzidenzkomplexe.I}\footcite{SchulteWeiss_1991_ChiralPolytopes}.
+Such characterisations have been the main tool used to build the existing datasets of polytopes.
+Very recently Mochán\footcite{Mochan_2021_AbstractPolytopesTheir_PhDThesis} fully  the automorphism groups of an abstract polytope of arbitrary symmetry type and described how to build the polytope form the group.
+Using these novel results I shall explore known libraries of groups (such as \smallgrp of \gap\ ) to build abstract polytopes from their automorphism group with different symemtry types (besides regular and chiral).
+This should be a first approach towards \cref{obj:buildNew}.
+
+Moreover, whenever we develop or group theoretical construction these results can be used to determine whether or not the given construction is an abstract poltype.
+
+%
+% This is the most used representation of an abstract polytope.
+% When an abstract polytope has a high degree of symmetry its automorphism group contains many combinatorial information of the polytope. In particular, regular polytopes are in correspondence with string C-groups, which are smooth quotient of Coxeter groups satisfying certain intersection property.
+% This fact has been strongly used to build the existing datasets mentioned in \cref{sec:quality}
+% Conder's census of regular polytopes was built by computing all possible normal subgroups of index at most $2000$ of the universal string Coxeter group. This approach is computational expensive it might be worthy try to push the bound of $2000$ further.
+% Hartley's Atlas of small regular polytopes and Leemans's Atlas of regular polytopes were built by analysing which of the groups in the library \smallgrp of \gap (Hartley's) or in Conway's \textsc{Atlas} of finite groups (Leemans's) are string C-group.
+% The automorphism group of a chiral polytope was characterised by Schulte and Weiss\footcite{SchulteWeiss_1991_ChiralPolytopes} and similar approaches to those for regular polytopes were used to build the existing datasets of chiral polytopes.
+
+% A first approximation to part \textit{(ii)} of \cref{obj:buildNew} must be to explore known datasets of groups and determine which of those groups can give automorphism groups of non regular and non chiral abstract polytopes.
+
+\paragraph{Schreier coset graphs and permutation groups.}
+Schreier coset graphs are a classical tool to represent a permutation group.
+Large groups can be represented with relative small graphs; for example, the symmetric group $S_{n}$ with $n!$ elements admits a representation on a graph with $n$ vertices.
+This tool shall be used with two main purposes: as a way to overcome the restriction of size on the computational representation of objects during the development of \cref{obj:buildNew}, but also as a theoretical tool to build new abstract polytopes while working on \cref{obj:theoreticalConst}.
+% Schreier coset graphs offer an efficient tool to represent automorphism groups of abstract polytopes as certain graphs. These tools have been used on the context of polytopes before
+% \footcite{Pellicer_2008_CprGraphsRegular}%
+% \footcite{Pellicer_2009_ExtensionsRegularPolytopes}%
+% \footcite{PellicerWeiss_2010_GeneralizedCprGraphs}%
+% \footcite{FernandesPiedade_2019_FaithfulPermutationRepresentations}
+% from a theoretical interest but little has been done to implement them as a tool to building datasets.
+
+It is important to remark that these graphs already have shown potential to improve known computational methods.
+In a joint manuscript\footcite{MonteroWeiss_2021_ProperLocallySpherical} with A. I. Weiss, we build infinite families of regular hypertopes (a generalisation of abstract polytopes) using Schreier coset graphs, solving an open question from a previous manuscript\footcite{FernandesLeemansWeiss_2020_ExplorationLocallySpherical} where the authors were not able to find a single example using traditional computational tools (in particular \lins form \magma).
+
+\paragraph{Maniplexes.} Maniplexes are a graph theoretical generalisation of an abstract polytopes.
+They were introduced by Wilson \footcite{Wilson_2012_ManiplexesPart1} in 2012 but just recently have proved to be useful on solving classical problems on abstract polytopes.
+This graph representation of polytopes is a natrual candidate to be our main way fo storing polytopes.
+By representing polytopes as graphs we are able to use graph-theoretical techniques such as \emph{covers}, \emph{voltage assignments} and \emph{extensions} to build new polytopes and hence new datasets of such,
+which aligns with both \cref{obj:buildNew} and \cref{obj:theoreticalConst}.
+
+Moreover, by using maniplexes we will explore computational techniques of data management such as variants of the canonical labelling algorithm for graphs.
+This shall allow us to represent our data not only in an efficient way but also following the FAIR principles, which aligns with \cref{obj:buildNew}, \cref{obj:manageCurrent} and \cref{obj:usage}.
+
+% For every $0\leq i \leq n-1$ and every flag (maximal chain) on an $n$-polytope $\cP$, there exists a unique $i$-adjacent flag. This provides the set of flags of a polytope a structure of $n$-edge-coloured graph, the \emph{flag-graph} of $\cP$. Wilson introduced the notion of \emph{maniplexes}} as a generalisation of maps. Every (flag-graph of a) polytope is a maniplex and Hubard and Garza-Vargas characterised\footcite{GarzaVargasHubard_2018_PolytopalityManiplexes} maniplexes that are polytopes.
+We shall emphasise that this approach has been barely used before and sits in a great place for our research.
+The supervisor is an expert on methods of building datasets of graphs and maniplexes are a stron bridge between graph-theoretical techniques and problems on abstract polytopes.
+
+% \paragraph{Quotients of the universal Coxeter group. } The generator $r_{i}$ of the \emph{universal string Coxeter group} $\cU$ acts on a maniplex by swapping all the $i$-adjacent flags.
+% This action is transitive and the induced permutation group is called the \emph{monodromy group}. This group keeps all the combinatorial information of a maniplex.
+% The kernel $K$ of the action determines the maniplex as a quotient $\cU/N$ and several combinatorial properties arise in a group theoretical way without relying on particular symmetry properties.
+% This approach could be potentially useful for \cref{obj:buildNew}.
+
+\paragraph{Extensions.} A polytope $\cP$ is an extension of a polytope $\cK$ if all the facets of $\cP$ are isomorphic to $\cK$. Symmetry conditions on $\cK$ imply symmetry restriction on $\cP$.
+Most of my career I have worked with problems related to extension of polytopes and such techniques have proved to be useful to build new polytopes from previously known ones.
+The specific technique varies from graph theoretical (using maniplexes and coset graphs) to purely group theoretical (such as free products with amalgamations).
+These techniques naturally sit on our research and will be used to build new abstract polytopes from previously existing ones hence expanding and creating new datasets from the existing ones.
+Observe that the use of extensions is a natural way to overcome the need of natural examples and datasets of higher rank polytopes.
+
+\paragraph{Operations. } Very informally, an operation is a mapping $O$ that assigns a polytope $O(\cK)$ to each polytope $\cK$. Usually the symmetries of $O(\cK)$ are related to the symmetries of $\cK$. Very recently in a joint work with Hubard and Mochán
+\footcite{HubardMochanMontero__VoltageOperationsManiplexes_preprint}, we have developed a theoretical technique%
+to build polytopes with prescribed symmetry type.
+We shall use this technique to build new abstract polytopes from previously known ones by using known families of operations.
+Implementing these operations in a computational way should be one of our first approaches to attack both \cref{obj:buildNew} and \cref{obj:theoreticalConst} and should allow us to build the first known dataset of non regular or chiral abstract polytopes.
+
+\marginLeft{Open science practices and FAIR principles}
+The nature of our research does not forces us to keep it closed at any step of the process.
+Therefore, our research will be as open as necessary.
+We shall keep preliminary versions of our research manuscripts on ArXiv and submit the final versions to high quality open access journals.
+We shall use open-source software and keep the development of our own packages and datasets in a public git repository.
+Final version of our datasets will be publicly available on a website and in a FAIR-repository (such as Zenodo, MathDataHub).
+
+As explained in \cref{sec:quality}, data management is still a young discipline in mathematics. Data production and storage is has not been a key part of the traditional development of theoretical mathematics.
+Moreover, although most theoretical mathematicians embrace the notion of \emph{open science} the nature of the objects has restrict the use of FAIR principle for mathematical data.
+This problem has been previously addressed and the notion of \emph{Deep FAIR} was introduced by Berčič et al.\footcite{BercicKohlhaseRabe_2020_DeepFairMathematics} as a particularization of FAIR principles to mathematical objects.
+We shall follow their line and at the same time use our project an its data-oriented nature to impulse \emph{Deep FAIR} principles.
+
+We shall make our datasets \emph{findable} by publishing datasets into an open FAIR-repository (Zenodo, MathDadaHub). We shall write appropriate metadata and documentation so that our datasets are not only accesible from the corresponding research papers (as it is usually the standard on mathematics) but from both a web-based interfaced and a downloadable source.
+This shall include corresponding software packages to manipulate and experiment with the datasets. Our data and metadata will be presented in web-based format as well as in platform independent formats (PDF, CVS).
+Full \emph{interoperability} of software and mathematical objects is almost impossible but we shall at least make our datasets compatible with most popular computer algebra systems (\gap, \sage, \magma). We shall follow community standards in order to create datasets and software packages as \emph{reusable} as possible.
+
+We shall finish this section by pointing out that there the nature of our research, being purely abstract, \emph{does not involve any gender dimension or other diversity aspects.}
 
 
+
+% % \foocite{}%
 %%% 1.2.1 METHODS %%%
 
 

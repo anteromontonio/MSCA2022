@@ -1,0 +1,48 @@
+% \theoremstyle{plain}
+% \newtheorem{theorem}[thm]{Theorem}
+% \newtheorem{lem}[thm]{Lemma}
+% \newtheorem{lemma}[thm]{Lemma}
+% \newtheorem{prop}[thm]{Proposition}
+% \newtheorem{proposition}[thm]{Proposition}
+% \newtheorem{coro}[thm]{Corollary}
+% \newtheorem{corollary}[thm]{Corollary}
+
+% \theoremstyle{definition}
+% \newtheorem{defn}[thm]{Definition}
+% \newtheorem{definition}[thm]{Definition}
+% \newtheorem{exam}[thm]{Example}
+% \newtheorem{example}[thm]{Example}
+%
+% \theoremstyle{remark}
+% \newtheorem{note}[thm]{Note}
+% \newtheorem{rem}[thm]{Remark}
+% \newtheorem{remark}[thm]{Remark}
+% %%%
+%
+% \numberwithin{equation}{section}
+\newtheoremstyle{colored}{}{}{\itshape}{}{\color{royalblue}\sffamily\bfseries}{}{ }{}
+\theoremstyle{colored}
+\newtheorem{obj}{RO\ignorespaces}
+
+
+
+%cleveref
+\Crefname{thm}{Theorem}{Theorems}
+% \Crefname{obj}{RO}{RO}
+\crefformat{obj}{#2RO#1#3}
+
+\Crefname{thm}{Theorem}{Theorems}
+\Crefname{theorem}{Theorem}{Theorems}
+\Crefname{lem}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\Crefname{prop}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\Crefname{coro}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+\Crefname{defn}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\Crefname{exam}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+\Crefname{note}{Note}{Notes}
+\Crefname{rem}{Remak}{Remarks}
+\Crefname{remark}{Remak}{Remarks}
