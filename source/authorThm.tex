@@ -24,12 +24,18 @@
 \theoremstyle{colored}
 \newtheorem{obj}{RO\ignorespaces}
 
+\newtheoremstyle{colored_alt}{}{}{}{}{\color{royalblue}\sffamily\bfseries}{}{ }{}
+\theoremstyle{colored_alt}
+\newtheorem{WP}{WP\ignorespaces}
+
+
 
 
 %cleveref
 \Crefname{thm}{Theorem}{Theorems}
 % \Crefname{obj}{RO}{RO}
 \crefformat{obj}{#2RO#1#3}
+\crefformat{WP}{#2WP#1#3}
 
 \Crefname{thm}{Theorem}{Theorems}
 \Crefname{theorem}{Theorem}{Theorems}

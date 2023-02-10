@@ -1,7 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[compact]{titlesec}
 \usepackage[hang,flushmargin,stable]{footmisc}
-\usepackage[margin=24mm, left=2cm, right=2cm]{geometry}
+\usepackage[margin=20mm, left=1.7cm, right=1.7cm, top=1.8cm, bottom=1.8cm]{geometry}
 \usepackage[nohyperlinks,nolist]{acronym}
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext}
@@ -12,6 +12,7 @@
 \usepackage{booktabs}
 \usepackage{csquotes}
 \usepackage{enumitem}
+\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 \usepackage{eurosym}
 \usepackage{fancybox}
 \usepackage{fancyhdr}
@@ -70,7 +71,7 @@
 
 
 % Color
-\definecolor{royalblue}{rgb}{0.0, 0.14, 0.4}
+\definecolor{royalblue}{RGB}{32,74,135}
 \allsectionsfont{\sffamily\bfseries\raggedright\color{royalblue}}
 \let\oldfootnotesize\footnotesize
 \newcommand{\highlight}[1]{\colorbox{gray!15}{\small{#1}}}
@@ -82,11 +83,14 @@
 
 
  \usepackage[backend=biber,
-style=verbose-ibid,
+style=verbose-inote,
+% style=verbose-inote,
 doi=false,isbn=false,url=false,eprint=false, giveninits=true,
 maxbibnames=4,
 sorting=nyt]{biblatex}
 \addbibresource{source/msca2022.bib}
+
+% \renewcommand{\footcite}{\footfullcite}
 
 %tables
 \usepackage{tabularx}
@@ -121,15 +125,15 @@ sorting=nyt]{biblatex}
 }
 \makeatother
 
-\usepackage{fnpct}
+% \usepackage{fnpct}
 
-%\setfnpct{ranges=true}
-\AdaptNote\footcite{oo+m}[footnote]{%
-\setfnpct{dont-mess-around}%
-\IfNoValueTF{#1}
-{#NOTE{#3}}
-{\IfNoValueTF{#2}{#NOTE[#1]{#3}}{#NOTE[#1][#2]{#3}}}%
-}
+% %\setfnpct{ranges=true}
+% \AdaptNote\footcite{oo+m}[footnote]{%
+% \setfnpct{dont-mess-around}%
+% \IfNoValueTF{#1}
+% {#NOTE{#3}}
+% {\IfNoValueTF{#2}{#NOTE[#1]{#3}}{#NOTE[#1][#2]{#3}}}%
+% }
 
 \hypersetup{
     pdftitle={H2020-MSCA-IF-2022},    % title

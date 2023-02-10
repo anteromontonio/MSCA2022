@@ -1,60 +1,99 @@
 \begin{ganttchart}[
-    vgrid,                                                 
-    bar/.append style={fill=red, blue, rounded corners=3pt},
-    milestone/.append style={fill=red}, 
+    vgrid,
+    bar/.append style={fill=Tred, rounded corners=3pt},
+    milestone/.append style={fill=red},
     milestone label font = \scriptsize,
-    vrule/.style={very thick, blue},
+    vrule/.style={very thick},
     vrule label font=\bfseries,
     y unit chart=0.72cm,
     x unit =0.53cm,
-    canvas/.append style={draw=none}  
+    canvas/.append style={draw=none}
     ]{1}{24}
     \gantttitlelist{1,...,24}{1}
     % predefined colours:
-    \definecolor{green2}{RGB}{0, 255, 81}
-    \definecolor{green1}{RGB}{226, 255, 227}
-    \definecolor{green3}{RGB}{102, 176, 50}
-    \definecolor{darkblue}{RGB}{13, 0, 255}
-    \definecolor{lightblue}{RGB}{112, 105, 245}
-    \definecolor{darkgoldenrod1}{RGB}{255, 185, 13}
+    %--- Tango-Colors definieren -------------------------------------------
+    	\definecolor{Tblue}{HTML}{3465A4}	% tango sky blue 2
+    	\definecolor{Tbluedark}{HTML}{204A87}	% tango sky blue 3
+    	\definecolor{Tbluelight}{HTML}{729FCF}	% tango sky blue 1
+    	\definecolor{Tbrown}{HTML}{C17D11}	% tango chocolate 2
+    	\definecolor{Tbrowndark}{HTML}{8F5902}	% tango chocolate 3
+    	\definecolor{Tbrownlight}{HTML}{E9B96E}	% tango chocolate 1
+    	\definecolor{Tgray}{HTML}{888A85}	% tango aluminium 4
+    	\definecolor{Tgraydark}{HTML}{555753}	% tango aluminium 5
+    	\definecolor{Tgraylight}{HTML}{BABDB6}	% tango aluminium 3
+    	\definecolor{Tgraylight2}{HTML}{E4E6E2}	% Sehr hell (für Tabellenköpfe)
+    	\definecolor{Tgraylight3}{HTML}{F0F2EE}	% Sehr hell (für Quelltexte)
+    	\definecolor{Tgreen}{HTML}{73D216}	% tango chameleon 2
+    	\definecolor{Tgreendark}{HTML}{4E9A06}	% tango chameleon 3
+    	\definecolor{Tgreenlight}{HTML}{8AE234}	% tango chameleon 1
+    	\definecolor{Tred}{HTML}{CC0000}	% tango scarlet red 2
+    	\definecolor{Treddark}{HTML}{A40000}	% tango scarlet red 3
+    	\definecolor{Tredlight}{HTML}{EF2929}	% tango scarlet red 1
+    	\definecolor{Tlilac}{HTML}{75507B}	% tango plum 2
+    	\definecolor{Tlilacdark}{HTML}{5C3566}	% tango plum 3
+    	\definecolor{Tlilaclight}{HTML}{AD7FA8}	% tango plum 1
+    	\definecolor{Tyellow}{HTML}{EDD400}	% tango butter 2
+    	\definecolor{Tyellowdark}{HTML}{C4A000}	% tango butter 1
+    	\definecolor{Tyellowlight}{HTML}{FCE94F}% tango butter 3
+    	\definecolor{Torange}{HTML}{F57900}	% tango orange 2
+    	\definecolor{Torangedark}{HTML}{CE5C00}	% tango orange 1
+    	\definecolor{Torangelight}{HTML}{FCAF3E}% tango orange 3
     \\
-    \ganttbar[bar/.append style={fill=lightblue}]{Work package 1  \ \ \ }{1}{24}
-	    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-	      {M1.1}{12}
-	    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-	      {M1.2}{24}
-	    \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-	      {M1.1}{12}
-	      \\
-   \ganttmilestone[inline=true]{D1.1}{12}
-   \ganttmilestone[inline=true]{D1.2}{14}
-   \ganttmilestone[inline=true]{D1.3}{24}
+    \ganttbar[bar/.append style={fill=Tbluelight}]{WP1  \ \ \ }{1}{24}
+	    \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+	      {M1.1}{4}
+	    \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+	      {M1.2}{12}
+	    \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+	      {M1.3}{18}
+	    \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+	      {M1.4}{22}
+% 	      \\
+   \ganttmilestone[inline=true]{D1.1}{6}
+   \ganttmilestone[inline=true]{D1.2}{8}
+   \ganttmilestone[inline=true]{D1.3}{14}
+   \ganttmilestone[inline=true]{D1.4}{20}
     \\
-    \ganttbar[bar/.append style={fill=green1}]
-      {Work package 2 \ \ \ }{1}{14}
-         \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-		      {M2.1}{2}
-         \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-		      {M2.2}{6}
-         \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
+    \ganttbar[bar/.append style={fill=Tgreen}]
+      {WP2 \ \ \ }{1}{24}
+         \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M2.1}{10}
+         \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M2.2}{20}
+%          \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
 		      {M2.3}{12}
-		      \\
-   \ganttmilestone[inline=true]{D2.1}{6}
-   \ganttmilestone[inline=true]{D2.2}{10}
-   \ganttmilestone[inline=true]{D2.3}{12}
-   \ganttmilestone[inline=true]{D2.4}{13}
-   \ganttmilestone[inline=true]{D2.5}{14}
+% 		      \\
+   \ganttmilestone[inline=true]{D2.1}{12}
+   \ganttmilestone[inline=true]{D2.2}{22}
+%    \ganttmilestone[inline=true]{D2.3}{12}
+%    \ganttmilestone[inline=true]{D2.4}{13}
+%    \ganttmilestone[inline=true]{D2.5}{14}
 
     \\
-    \ganttbar[bar/.append style={fill=darkgoldenrod1}]
-      {Work package 3 \ \ \ }{12}{24}
-       \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-		      {M3.1}{15}
-       \ganttmilestone[inline=true, milestone/.append style={fill=magenta, rounded corners = 3pt}]
-		      {M3.2}{24}
+    \ganttbar[bar/.append style={fill=Tyellow}]
+      {WP3 \ \ \ }{4}{24}
+       \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M3.1}{6}
+%        \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+% 		      {M3.2}{24}
 
+%     \\
+   \ganttmilestone[inline=true]{D3.1}{10}
+   \ganttmilestone[inline=true]{D3.2}{12}
+   \ganttmilestone[inline=true]{D3.3}{14}
     \\
-   \ganttmilestone[inline=true]{D3.1}{18}
-   \ganttmilestone[inline=true]{D3.2}{20}
-   \ganttmilestone[inline=true]{D3.3}{24}
+%
+%
+    \ganttbar[bar/.append style={fill=Tlilaclight}]
+      {WP4 \ \ \ }{3}{24}
+       \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M4.1}{4}
+       \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M4.2}{6}
+       \ganttmilestone[inline=true, milestone/.append style={fill=Treddark, rounded corners = 3pt}]
+		      {M4.3}{18}
+%
+   \ganttmilestone[inline=true]{D4.1}{12}
+   \ganttmilestone[inline=true]{D4.2}{24}
+%    \ganttmilestone[inline=true]{D3.3}{24}
 \end{ganttchart}

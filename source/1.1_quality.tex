@@ -39,40 +39,50 @@ Very broadly speaking, the aim of the proposed project \ourp\ is to use this opp
 % Discrete and combinatorial objects often possess a finite and natural way to save them as computational objects.
 % Of course, this natural setting is usually limited by computational power or by the lack of efficient representation of such objects.
 
-The  main objective of \ourp\ is to develop datasets and computational tools for highly symmetrical discrete objects, in particular polytopes, maps and maniplexes.
-More precisely, the main research goals for \ourp are \emph{building complete, accessible, useful and reliable datasets of abstract polytopes} (see \cref{obj:buildNew} and \cref{obj:manageCurrent}) and \emph{developing new theoretical tools for constructing abstract polytopes, maps and maniplexes} (see \cref{obj:theoreticalConst}).
-Finally, we shall encourage the mathematical community to adopt \ourp\ as a standard for creating, storing and presenting datasets of combinatorial objects.
+The  main objective of \ourp\ is to develop datasets and computational tools for highly symmetrical discrete objects, in particular abstract polytopes, maps and maniplexes.
+More precisely, the main research goals for \ourp\ are \emph{building complete, accessible, useful and reliable datasets of abstract polytopes} (see \cref{obj:datasets} and \cref{obj:publish}) and \emph{developing new theoretical tools for constructing abstract polytopes, maps and maniplexes} (see \cref{obj:theory}).
+Finally, we shall encourage the mathematical community to adopt \ourp\ as a standard for creating, storing and presenting datasets of combinatorial objects (see \cref{obj:longterm}).
 
-The nature of \ourp involves a two-way flow of knowledge:
+The nature of \ourp\ involves a two-way flow of knowledge:
 With the aim of generating new datasets of highly symmetric polytopes and related objects, we will develop new theoretical results and methods, enabling us to devise new algorithms and combinatorial representation for constructing highly symmetric abstract polytopes.
 The algorithms will then be carefully implemented and executed.
-The obtained datasets will then be analysed with the aim of finding interesting patterns, suggesting new conjectures and proposing new directions for further research.
+The obtained datasets will then be analysed with the aim of finding interesting patterns, suggesting new conjectures and proposing new directions for further research. This general idea represented in \cref{fig:idea}.
 
-As a result of the sucess of our research we will develop a family of repositories, datasets and software packages that allow both researchers and students experiment, identify patterns and formulate conjectures on abstract polytopes.
-To achieve this succes, the project will bring together a resercher with expertice on construction of abstract polytopes with prescribed combinatorial conditions with a supervisor with large experience on datases of discrete objects, in particular of highly symmetric graphs and maps.
+\begin{figure}[hbt]
+\centering
+  \includegraphics[width=0.9\textwidth]{source/overall}
+  \caption{General idea of \ourp\ }\label{fig:idea}
+\end{figure}
+
+
+
+As a result of the success of our research we will develop a family of repositories, datasets and software packages that allow both researchers and students to experiment, to identify patterns and to formulate conjectures on abstract polytopes.
+To achieve this objective, the project will bring together a researcher with expertise on construction of abstract polytopes with prescribed combinatorial conditions with a supervisor with large experience on datasets of discrete objects, in particular of highly symmetric graphs and maps.
 
 \colorrule
 \marginLeft{Research objectives}
 
-Abstract polytopes are combinatorial objects that generalise (the face lattice) of convex polytopes.
+Abstract polytopes (AP) are combinatorial objects that generalise (the face lattice) of convex polytopes.
 Enumeration and classification of highly symmetric convex polytopes goes all the way to the Greeks and the classical problem of classifying what today we know as \emph{Platonic Solids} to the beginning of last century when the classification of higher dimensional convex polytopes was achieved.
-By considering combinatorial objects and hence removing the geometric constraints, often imposed by the ambiance space, opens the possibilities for abstract polytopes and turns the complete classification problem into a series of enumerating families with particular characteristic.
+By considering combinatorial objects and hence removing the geometric constraints, often imposed by the ambient space, the possibilities for abstract polytopes are now whide open and a complete classification problem turns into a series of enumeration problems of families with particular characteristics.
 
-The degree of symmetry of a polytope can be measured by the number of orbits of certain substructures called \emph{flags}. \todo{rewrite}
-\emph{Regular polytopes} have $1$ flag-orbit ($1$-orbit polytopes).
-This notion of regularity coincides with the classical geometrical one.
-\todo{first, 2-orbit, then chiral as the most prominent case} Informally speaking, \emph{chiral polytopes} are those that admit maximal degree of combinatorial rotations but that do not admit mirror reflections.
-As I will described in detail below, the classes of regular and chiral polytopes are by far the most studied symmetry classes of abstract polytopes.
-This has led to the constructions of some datasets of highly symmetric polytopes, which  shall be described in detail below.
+The degree of symmetry of a polytope can be measured by the number of orbits of its automorphism group on certain substructures called \emph{flags}.
+This combinatorial way of measuring symmetry agrees with the classical geometrical notion.
+\emph{Regular polytopes} are those that are flag-transitive, meaning they have exactly $1$ flag-orbit.
+This \emph{symmetry type} of polytopes has been traditionally the most studied one and includes classical examples as Platonic solids and regular tilings of Euclidean and Hyperbolic spaces.
+A slightly less symmetric class of polytopes is that of \emph{$2$-orbit polytopes} and among those, \emph{chiral polytopes} are the most studied.
+The notion of chirality is a classical one in other natural sciences, notably in Chemistry.
+However, in the context of AP a chiral polytope is one that admits maximal degree of combinatorial rotations but that do not admit mirror reflections.
+As I will described in detail below, the classes of regular and chiral polytopes are by far the most studied symmetry types of AP.
+This has led to the constructions of some datasets of highly symmetric polytopes, which  shall be described down below.
 
-
-Chiral polytopes are just one of $2^{n}-1$ possible symmetry type class of $2$-orbit $n$-polytopes.
+Chiral polytopes are just one of $2^{n}-1$ possible symmetry types of $2$-orbit $n$-polytopes.
 Classical examples of some of the other classes of the $2$-orbit polytopes are known.
 However, the general problem of determining if for every pair $(n,T)$ with $n>3$ and $T$ a $2$-orbit symmetry type  exists an $n$-polytope of symmetry type $T$ remains open.
 Some examples of maniplexes (a slightly more general class of objects) were build very recently\footcite{PellicerPotocnikToledo_2019_ExistenceResultTwo}, but whether or not they are polytopal remains unknown.
 Constructing and classifying $n$-polytopes with $k$-orbits and given symmetry type is still a widely open problem\footcite{CunninghamPellicer_2018_OpenProblems$k$} and it is one of the main motivations for the development of \ourp.
 
-These existing datasets of polytopes suffer of the following restrictions
+The existing datasets of polytopes suffer of the following restrictions
 \begin{enumerate}[label=\textit{(\roman*)}, noitemsep]
   \item They are mainly focused on regular or chiral polytopes.
   \item The size of the examples is very restrictive.
@@ -111,7 +121,7 @@ With the emerging development of theoretical results for less symmetric polytope
 
 The problematic expressed above outlines our first objective.
 
-\begin{obj}\label{obj:buildNew}
+\begin{obj}\label{obj:datasets}
   Extend the existing and build new datasets of abstract polytopes and related structures with particular focus on
   \begin{enumerate}[label=\textit{(\roman*)}, noitemsep]
     \item Building examples on ranks higher than $3$
@@ -119,54 +129,69 @@ The problematic expressed above outlines our first objective.
   \end{enumerate}
 \end{obj}
 
-\cref{obj:buildNew} is of course very general but also very ambitious and should be interpreted as the general research line of \ourp.
-Any contribution to this objective is a good way of measuring the global success of \ourp.
+\cref{obj:datasets} is of course very general but also very ambitious and should be interpreted as the general research line of \ourp.
+Any contribution to this objective is a good way of measuring the overall success of \ourp.
 
-Another pressing issue to address is that the existent datasets of highly symmetric maps and polytopes are not only limited in the sense discussed above, they have not been exploded to its full capacity.
+Many of the first datasets of AP are based on the (small) size of the objects.
+Either by taking advantage of previously computed objects (such as the library \smallgrp\ ) or by using computational routines that, because of their own nature are limited by the size of the input (such as the \lins).
+However, it has been shown that the size of the smallest regular polytope of rank $n$ grows exponentially with $n$\footcite{Conder_2013_SmallestRegularPolytopes}, while the size of the smallest chiral $n$-polytope is at least of factorial growth with respect to $n$\footcite{Cunningham_2017_NonFlatRegular}.
+This explains why the amount of examples of higher rank polytopes drops dramatically in the current available datasets.
+
+There is a natural theoretical counterpart to \cref{obj:datasets}, which outlines \cref{obj:theory}:
+The lack of datasets AP including other symmetry classes mostly caused by the lack of examples and theoretical constructions of such objects.
+Hence, parallel to \cref{obj:datasets} we shall develop the following RO.
+
+\begin{obj}\label{obj:theory}
+Develop new constructions of highly symmetric polytopes. In particular, focus on the constructions of abstract regular polytopes with given symmetry type to eventually build the corresponding datasets.
+\end{obj}
+
+\cref{obj:theory} by itself represents an extremely ambitious and it goes beyond any two year project.
+Any theoretical contribution is already of great interest to the community.
+However, we strongly believe that in order to really cause an impact on the workflow of research on abstract polytopes all theoretical contributions should be accompanied by its computational analogue.
+As mentioned before, this RO should go parallel to \cref{obj:datasets}, meaning that those theoretical construction should allow us to build new datasets and by exploring those datasets we should be able to identify pattern, formulate conjectures and develop new theoretical constructions.
+
+Another pressing issue to address is that the existent datasets of highly symmetric maps and polytopes are not only limited on size, rank and symmetry type, but they are practically not used.
 One of the reasons behind it is that the information in most of these data sets is not very user-friendly.
-Even the small amount of existing data sets have been developed by several people, mostly in an independent way, using different notation and different computer algebra systems.
+Even the small amount of existing datasets have been developed by several people, mostly in an independent way, using different notation and different computer algebra systems.
 % This usually stops a researcher to use a given data set just because he or she might not be familiar with the notation or programming language.
 Moreover, many of these datasets exist only as raw text which is not always easy to consult.
 % However, we could use the fact the the amount of data is not huge in our advantage.
+This motivates our next RO.
 
-
-\begin{obj}\label{obj:manageCurrent}
-Collect, unify and make the existing data sets user-friendly and in a FAIR-ly way so that \ourp  eventually becomes the standard to-go when consulting or publishing new data on highly symmetric polytopes by
-\begin{enumerate}[label=\textit{(\roman*)}, noitemsep]
- \item Creating and developing a unique data set from the existent ones that unifies notation and identification of the data and make it available so that other researches could experiment and eventually contribute to \ourp .
-\item Building a web-based interface to our data set for easy and quick consultation.
- \item Developing this data set in a way that can be easily implemented in some of the standards computer algebra systems such as \magma, \gap\ and \sage.
-	\item Writing appropriate documentation so that \ourp  eventually becomes available for others to contribute.
+\begin{obj}\label{obj:publish}
+% \color{magenta}
+% I would change this objective more in the spirit:
+Develop standards and a platform for storing and presenting the datasets of abstract polytopes
+ (both new and existing) in a unified and user-friendly way, complying with the FAIR principles. In particular:
+% \color{black}
+% \color{green}
+% DELETE: Collect, unify and make the existing data sets user-friendly and in a FAIR-ly way so that \ourp  eventually becomes the standard to-go when consulting or publishing new data on highly symmetric polytopes by
+% \color{black}
+\begin{enumerate}[label=\textit{(\roman*)}]
+%  \item \color{red} **** I would delete this green part. It's too specific: \color{green} Creating and developing a unique data set from the existent ones that unifies notation and identification of the data and make it available so that other researches could experiment and eventually contribute to \ourp .
+\item  Survey the existing datasets of AP and related objects, with the emphases on the ways in which they are stored, documented and presented.
+\item
+Identify the strengths and weaknesses of the existing datasets and propose unified standards for presentation, management and stewardship of the
+datasets of AP, following FAIR guideline principles.
+% \color{black}
+\item Build a web-based and user-friendly interface to datasets of abstract polytopes stored in accordance with the proposed standards.
+%  \item \color{red} **** I think that the following two lines could be deleted, as they are in fact subsumed within the development of standards and interface.
+%  Developing this data set in a way that can be easily implemented in some of the standards computer algebra systems such as \magma, \gap\ and \sage.
+% 	\item Writing appropriate documentation so that \ourp  eventually becomes available for others to contribute.
 \end{enumerate}
 \end{obj}
 
-\cref{obj:manageCurrent} is very concrete and very easy to verify. It very easily show progress on \ourp  while at the same time sets a good start point to our ambitious general objective.
-The current state-of-the-art allows us to start with  from the very beginning of \ourp
-
-Many of the first data sets of abstract polytopes are based on the (small) size of the objects.
-Either by taking advantage of previously computed objects (such as the library \smallgrp\ ) or by using computational routines that, because of their own nature are limited by the size of the input (such as the \lins).
-However, it has been shown that the size of the smallest regular polytope of rank $n$ grows exponentially with $n$\footcite{Conder_2013_SmallestRegularPolytopes} , while the size of the smallest chiral $n$-polytope is at least of factorial growth with respect to $n$\footcite{Cunningham_2017_NonFlatRegular}.
-This explains why the amount of examples of higher rank polytopes drops dramatically on the current available datasets.
-
-The lack of not only datasets but also theoretical constructions of certain symmetry types for polytopes motivates the following objective.
-
-\begin{obj}\label{obj:theoreticalConst}
-Develop new constructions of highly symmetric polytopes. In particular, focus on the constructions of abstract regular polytopes with given symmetry type to eventually build the corresponding data sets.
-\end{obj}
-
-\cref{obj:theoreticalConst} by itself represents an extremely ambitious and it goes beyond any two year project.
-Any theoretical contribution is already of great interest to the community.
-However, we strongly believe that in order to really cause an impact on the workflow of research on abstract polytopes all theoretical contributions should be accompanied by its computational analogue.
-As mentioned before, this RO should go parallel to \cref{obj:buildNew}, meaning that those theoretical construction should allow us to build new datasets and by exploring those datasets we should be able to identify pattern, formulate conjectures and develop new theoretical constructions.
+\cref{obj:publish} is very concrete and very easy to verify.
+It will very easily show progress on \ourp  while at the same time will set a good and concrete step towards our ambitious general objective.
 
 Of course, \ourp  is aimed to become a long term and eventually permanent resource for the community doing research on symmetries of maps and abstract polytopes.
 This will not be achievable without the involvement of such community.
 
-\begin{obj}\label{obj:usage}
+\begin{obj}\label{obj:longterm}
 Encourage and motivate both well-established and young researchers to use and contribute to \ourp  so that it eventually becomes the standard way to explore, experiment and publish data sets, routines and computational tools for the development of the research of abstract polytopes.
 \end{obj}
 
- \cref{obj:usage} is very ambitious and we acknowledge that it depends on the community more that on ourselves, but we strongly believe that our approach and the the current status of the could fit together to fill a gap that has been present for many years now.
+ \cref{obj:longterm} is very ambitious and we acknowledge that it depends on the community more that on ourselves, but we strongly believe that our approach and the the current status of the could fit together to fill a gap that has been present for many years now.
  We shall achieve this objective by actively consulting an \emph{external committee} of leading experts on the community.
 
 
@@ -181,7 +206,7 @@ This research approach has resulted in the development of interesting data sets 
 Highly symmetric graphs is arguably the most studied family of combinatorial objects from the approach of building datasets of objects.
 It is believed that empirical study of symmetric graphs of small valence started in 1930s, when R.M. Foster began collecting examples of interesting graphs that could serve as models for electrical networks\footcite{Foster_1932_GeometricalCircuitsElectrical}.
 
-Of course, this area of research has taken advantage of the development and improvement of computational power but the theoretical research goes back to Tutte and his work on classifying $3$-valent arc-transitive graphs\footcite{Tutte_1947_FamilyCubicalGraphs}\footcite{Tutte_1959_SymmetryCubicGraphs} .
+% Of course, this area of research has taken advantage of the development and improvement of computational power but the theoretical research goes back to Tutte and his work on classifying $3$-valent arc-transitive graphs\footcite{Tutte_1947_FamilyCubicalGraphs}\footcite{Tutte_1959_SymmetryCubicGraphs} .
 % It is believed that empirical study of symmetric graphs of small valence started in 1930s, when R.M. Foster  began collecting examples of interesting graphs that could serve as models.
 % His work was published in a book which now carries the name Foster’s census\footcite{Foster_1966_CensusTrivalentSymmetrical}.
 The development of the theory, together with more powerful computers, resulted in a breakthrough of datasets of highly symmetric graphs constructions.
@@ -191,18 +216,22 @@ Based on their deep theoretical result on the order of automorphism groups\footc
 Very recently, using the database of vertex-transitive groups of small degree, Conder and Verret have compiled a complete list of all edge-transitive graphs (of arbitrary valence) up to order $63$ \footcite{ConderVerret_2019_EdgeTransitiveGraphs}, while
 Holt and Royle have extended their census of all vertex-transitive graphs up to order $48$\footcite{HoltRoyle_2020_CensusSmallTransitive}.
 
-The classification and enumeration of groups has been also an intriguing problem since the beginning of theory.
-In 1854 Cayley\footcite{Cayley_1854_Vii.TheoryGroups} introduced the axiomatic definition of a group and enumerated the groups of order up to $6$.
-Of course this is just the first step in what became an active research in both, theoretical mathematics\footcite{BlackburnNeumannVenkataraman_2007_EnumerationFiniteGroups} , as well as a motivation to develop computation tools such as the library \smallgrp \footcite{BescheEickOBrien_2001_GroupsOrderMost} of small groups of \gap\ .
-In fact, one of the principal motivators on the study of symmetries of discrete objects the the \emph{classification of Finite Simple Groups}. It turns out that many of the so-called sporadic simple groups can be understood as symmetry groups of discrete objects.
-This classification eventually derived in the construction of the \textsc{Atlas} of Finite Groups \footcite{Conway_1986_AtlasFiniteGroups}.
+% The classification and enumeration of groups has been also an intriguing problem since the beginning of theory.
+% In 1854 Cayley\footcite{Cayley_1854_Vii.TheoryGroups} introduced the axiomatic definition of a group and enumerated the groups of order up to $6$.
+% Of course this is just the first step in what became an active research in both, theoretical mathematics\footcite{BlackburnNeumannVenkataraman_2007_EnumerationFiniteGroups} , as well as a motivation to develop computation tools such as the library \smallgrp \footcite{BescheEickOBrien_2001_GroupsOrderMost} of small groups of \gap\ .
+% In fact, one of the principal motivators on the study of symmetries of discrete objects the the \emph{classification of Finite Simple Groups}. It turns out that many of the so-called sporadic simple groups can be understood as symmetry groups of discrete objects.
+% This classification eventually derived in the construction of the \textsc{Atlas} of Finite Groups \footcite{Conway_1986_AtlasFiniteGroups}.
 
 % \colorrule
 
+
+% ****OLD STUFF*********
 % \marginLeft{Once upon a time of polytopes}
 % The term “polytope” is the generic word to refer to classical geometrical objects such as polygons and polyhedra; while maps on surfaces are also geometrical and topological objects that share many properties with classical convex polyhedra. Abstract polytopes are purely combinatorial objects that generalise the geometrical notion of convex polytopes while maniplexes are a further generalisation of abstract polytopes. The most relevant shared property for the objects of our interest is symmetry, which sits our project in the interplay between combinatorics and group theory with a natural flavor of geometry and topology. We introduce below the mathematical context of the objects that we are interested in. We decide to use an historical approach to emphasise on the relevance of such objects across the development mathematical knowledge.
+% *********************************************
 
-The problem of enumerating and classifying regular polyhedra in the Euclidean space is as old as formal mathematics themselves. The enumeration and classification of the five Platonic Solids is one the most antique classification problems.
+The problem of enumerating and classifying regular polyhedra in the Euclidean space is as old as formal mathematics themselves.
+The enumeration and classification of the five Platonic Solids is one the most antique classification problems.
 For many years it was considered a complete classification problem (and it was) but later it was shown that by relaxing geometrical constraints we could generalise platonic solids to stellated polyhedra\footcite{Kepler_1864_HarmoniaMundiOpera}\footcite{Poinsot_1810_MemoireSurLes}\footcite{Cauchy_1813_AlCauchyRecherche}, \emph{infinite skew polyhedra}\footcite{Coxeter_1937_RegularSkewPolyhedra} and finally to \emph{Grünbaum-Dress polyhedra}\footcite{Gruenbaum_1977_RegularPolyhedraOld}\footcite{Dress_1981_CombinatorialTheoryGrunbaums}\footcite{Dress_1985_CombinatorialTheoryGrunbaums}, which is what today is accepted as the complete classification of regular polyhedra in the Euclidean space\footcite{McMullenSchulte_1997_RegularPolytopesOrdinary}.
 % There is archaeological evidence of stone balls representing what we now know as  the symmetry groups of the five Platonic Solids.
 % This evidence was discovered in Scotland and dates from the first half of the third millennia BCE.
@@ -220,10 +249,9 @@ For many years it was considered a complete classification problem (and it was) 
 % By relaxing the definition of a regular polyhedron Grünbaum presented\footcite{Gruenbaum_1977_RegularPolyhedraOld} a list of $47$ regular polyhedra which included the Platonic Solids, Stellated polyhedra as well as Petrie-Coxeter skew polyhedra.
 % Soon after A. Dress describes\footcite{Dress_1981_CombinatorialTheoryGrunbaums} another polyhedron and proves\footcite{Dress_1985_CombinatorialTheoryGrunbaums} that the list of $48$ regular polyhedra in the Euclidean space is complete.
 
-The problem of classifying regular polyhedra shows how by relaxing geometrical conditions one can open the door to new objects.
-In fact, B. Grünbaum was one of the firsts that formally treated geometrical polyhedra-like objects as purely combinatorial objects by introducing the notion of the notion \emph{polystroma}\footcite{Gruenbaum_1978_RegularityGraphsComplexes}.
+ B.Grünbaum was one of the firsts that formally treated geometrical polyhedra-like objects as purely combinatorial objects by introducing the notion of the notion \emph{polystroma}\footcite{Gruenbaum_1978_RegularityGraphsComplexes}.
 This notion eventually evolved to what we know today as \emph{abstract polytopes}, introduced in the early 80's
-\footcite{Schulte_1980_RegulareInzidenzkomplexe_PhDThesis}\footcite{DanzerSchulte_1982_RegulareInzidenzkomplexe.I}\footcite{Schulte_1983_RegulareInzidenzkomplexe.Ii} .
+\footcite{Schulte_1980_RegulareInzidenzkomplexe_PhDThesis}%\footcite{DanzerSchulte_1982_RegulareInzidenzkomplexe.I}\footcite{Schulte_1983_RegulareInzidenzkomplexe.Ii} .
 
 The theory of highly symmetric abstract polytopes nourishes from several branches of mathematics, including group theory, topology and geometry.
 Coxeter is also attributed to classify the groups generated by hyperplane reflections, leading to what we today know as \emph{Coxeter groups}.
@@ -234,7 +262,7 @@ In 1978 G. Jones and D. Singerman published his classical manuscript\footcite{Jo
 The ideas behind this paper show important equivalences between topological maps (embedding of graphs on orientable surfaces), certain quotients triangular groups (Coxeter groups of rank $3$), maps on Riemann surfaces and certain permutations on the darts of the map.
 These equivalences are a combinatorial/discrete version of the classical Uniformization theorem\footcite{Abikoff_1981_UniformizationTheorem} for Riemann surfaces.
 The work of Jones and Singerman was an important contribution on the theory of discrete group actions on Riemann surfaces and it was eventually connected the theory Grothendieck's \emph{Dessins d'enfant}\footcite{JonesWolfart_2016_DessinsDenfantsRiemann}.
-Some other combinatorial equivalences of maps on surfaces were also explored by Tutte\footcite{Tutte_1973_WhatIsMap}, Vince\footcite{Vince_1983_CombinatorialMaps}  and  Wilson\footcite{Wilson_2012_ManiplexesPart1}.
+% Some other combinatorial equivalences of maps on surfaces were also explored by Tutte\footcite{Tutte_1973_WhatIsMap}, Vince\footcite{Vince_1983_CombinatorialMaps}  and  Wilson\footcite{Wilson_2012_ManiplexesPart1}.
 
 % % Coxeter's work serve as inspiration for many mathematicians, one of them being , which is an ancestor of what we today call \emph{abstract polytopes}.
 % % Grünbaum is also responsible of first treating symmetric polyhedra from a combinatorial viewpoint.
@@ -250,14 +278,19 @@ Abstract polytopes include many of the object mentioned above.
 Regular abstract polytopes, those with larger degree of symmetry are by far the most studied class of abstract polytopes.
 Most of this early theory can be found in the very dense and comprehensive monograph written by Schulte a McMullen\footcite{McMullenSchulte_2002_AbstractRegularPolytopes}.
 Of our particular interest is the problem of building regular polytopes, for which numerous publications exists.
-We should mention that there exist universal constructions\footcite{Schulte_1983_ArrangingRegularIncidence}\footcite{Schulte_1985_ExtensionsRegularComplexes}, constructions prescribing local combinatorics \footcite{Danzer_1984_RegularIncidenceComplexes}\footcite{ Pellicer_2009_ExtensionsRegularPolytopes}\footcite{ Pellicer_2010_ExtensionsDuallyBipartite} and constructions fixing interesting families of groups as automorphism groups\footcite{CameronFernandesLeemansMixer_2017_HighestRankPolytope}\footcite{FernandesLeemans_2018_CGroupsHigh}\footcite{ LeemansMoerenhoutOReillyRegueiro_2017_ProjectiveLinearGroups}\footcite{ Pellicer_2008_CprGraphsRegular} .
+We should mention that there exist universal constructions%
+\footcite{Schulte_1983_ArrangingRegularIncidence}\footcite{Schulte_1985_ExtensionsRegularComplexes}, %
+constructions prescribing local combinatorics \footcite{Danzer_1984_RegularIncidenceComplexes}\footcite{ Pellicer_2009_ExtensionsRegularPolytopes} %\footcite{ Pellicer_2010_ExtensionsDuallyBipartite}
+and constructions fixing interesting families of groups as automorphism groups\footcite{CameronFernandesLeemansMixer_2017_HighestRankPolytope}\footcite{FernandesLeemans_2018_CGroupsHigh}\footcite{ LeemansMoerenhoutOReillyRegueiro_2017_ProjectiveLinearGroups}\footcite{ Pellicer_2008_CprGraphsRegular} .
 
 The second most studied symmetry class of polytopes is that of \emph{chiral polytopes}.
-Informally speaking, a chiral polytope is a polytope having full degree of (combinatorial) rotational symmetry without having (combinatorial) reflections.
+% Informally speaking, a chiral polytope is a polytope having full degree of (combinatorial) rotational symmetry without having (combinatorial) reflections.
 They were introduced by Schulte and Weiss in 1990\footcite{SchulteWeiss_1991_ChiralPolytopes}
 %  where an analogous result to the one for the automorphism group of regular polytopes was established.
-Chiral polytopes were introduced as a natural generalization of \emph{chiral maps}, which have been part of the classical theory of maps from it begging and numerous examples exist\footcite{CoxeterMoser_1972_GeneratorsRelationsDiscrete}\footcite{ConderDobcsanyi_2001_DeterminationAllRegular}\footcite{Sherk_1962_FamilyRegularMaps} .
-However, the problem of constructing chiral polytopes of higher ranks has proved to be much harder to that of constructing regular polytopes. Some rank $4$ examples were constructed as quotients of hyperbolic tilings\footcite{NostrandSchulteWeiss_1993_ConstructionsChiralPolytopes}\footcite{SchulteWeiss_1994_ChiralityProjectiveLinear}\footcite{Nostrand_1994_RingExtensionsChiral}\footcite{NostrandSchulte_1995_ChiralPolytopesHyperbolic} .
+% Chiral polytopes were introduced
+as a natural generalization of \emph{chiral maps}, which have been part of the classical theory of maps from it begging and numerous examples exist\footcite{CoxeterMoser_1972_GeneratorsRelationsDiscrete}\footcite{ConderDobcsanyi_2001_DeterminationAllRegular}\footcite{Sherk_1962_FamilyRegularMaps} .
+However, the problem of constructing chiral polytopes of higher ranks has proved to be much harder to that of constructing regular polytopes.
+Some rank $4$ examples were constructed as quotients of hyperbolic tilings\footcite{NostrandSchulteWeiss_1993_ConstructionsChiralPolytopes}\footcite{SchulteWeiss_1994_ChiralityProjectiveLinear}\footcite{Nostrand_1994_RingExtensionsChiral}\footcite{NostrandSchulte_1995_ChiralPolytopesHyperbolic} .
 A universal construction\footcite{SchulteWeiss_1995_FreeExtensionsChiral} was used to produce the first (infinite) example of a rank-$5$ chiral polytope.
 However, the first finite rank $5$ polytopes were constructed by Conder et al. in 2008\footcite{ConderHubardPisanski_2008_ConstructionsChiralPolytopes}.
 It was until 2010 that Pellicer showed\footcite{Pellicer_2010_ConstructionHigherRank} the existence of chiral polytopes of rank $n$ for ever $n \geq 4$;
@@ -265,9 +298,9 @@ The result by Pellicer, although constructive, is not very practical. The size o
 Later on examples of new chiral polytopes have been constructed from previously known ones\footcite{CunninghamPellicer_2014_ChiralExtensionsChiral}\footcite{ConderZhang_2017_AbelianCoversChiral}\footcite{Montero_2019_ChiralExtensionsToroids_PhDThesis}\footcite{Montero_2021_SchlaefliSymbolChiral} .
 
 The problem of classifying and enumerating highly symmetric polytopes has been part of the theory from the beginning.
-Even before the emergence of computers appeared the first
-Both, the classification of the $5$ Platonic Solids to the enumeration of the $48$ Grünbaum-Dress polyhedra in $\bE^{3}$ depend on strong geometric restrictions.
-However, the combinatorial nature of abstract poltypes open the possibilities to, in principle, have numerous examples of abstract polytopes.
+% Even before the emergence of computers appeared the first
+% From classification of the $5$ Platonic Solids to the enumeration of the $48$ Grünbaum-Dress polyhedra in $\bE^{3}$ depend on strong geometric restrictions.
+% However, the combinatorial nature of abstract poltypes open the possibilities to, in principle, have numerous examples of abstract polytopes.
 These has lead to the construction of some datasets of highly symmetric polytopes, which we review below.
 
 \paragraph{Conder - Regular orientable maps by genus} Computed by M. Conder it originally contained all ($3378$) regular maps on orientable surfaces of genus 2 to 101 up to isomorphism an duality. It was later extended to include genus up to $301$ for a total of $15824$ maps.
@@ -299,8 +332,7 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 
 \paragraph{Leemans et al. - An Atlas of chiral polytopes for small simple groups} It is the analogous to the one above but for chiral polytopes. It currently contains a total of $19,964$ polytopes.
 
-\todo{include a paragraph about what is missing}
-
+% As mentioned before, the existing datasets of polytopes
 
 
 
@@ -350,7 +382,7 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 %
 % The problematic expressed above outlines our first objective.
 %
-% \begin{obj}\label{obj:buildNew}
+% \begin{obj}\label{obj:datasets}
 %   Extend the existing and build new datasets of abstract polytopes and related structures with particular focus on
 %   \begin{enumerate}[label=\textit{(\roman*)}, noitemsep]
 %     \item Building examples on ranks higher than $3$
@@ -358,7 +390,7 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 %   \end{enumerate}
 % \end{obj}
 %
-% \cref{obj:buildNew} is of course very general but also very ambitious and should be interpreted as the general research line of \ourp.
+% \cref{obj:datasets} is of course very general but also very ambitious and should be interpreted as the general research line of \ourp.
 % Any contribution to this objective is a good way of measuring the global success of \ourp.
 %
 % % The general objective of \ourp  is to build a environment of data sets and computational tools for maps, abstract polytopes and maniplexes.
@@ -372,7 +404,7 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 % % However, we could use the fact the the amount of data is not huge in our advantage.
 %
 %
-% \begin{obj}\label{obj:manageCurrent}
+% \begin{obj}\label{obj:publish}
 % Collect, unify and make the existing data sets user-friendly and in a FAIR-ly way so that \ourp  eventually becomes the standard to-go when consulting or publishing new data on highly symmetric polytopes by
 % \begin{enumerate}[label=\textit{(\roman*)}, noitemsep]
 %  \item Creating and developing a unique data set from the existent ones that unifies notation and identification of the data and make it available so that other researches could experiment and eventually contribute to \ourp .
@@ -382,7 +414,7 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 % \end{enumerate}
 % \end{obj}
 %
-% \cref{obj:manageCurrent} is very concrete and very easy to verify. It very easily show progress on \ourp  while at the same time sets a good start point to our ambitious general objective.
+% \cref{obj:publish} is very concrete and very easy to verify. It very easily show progress on \ourp  while at the same time sets a good start point to our ambitious general objective.
 % The current state-of-the-art allows us to start with  from the very beginning of \ourp
 %
 % Many of the first data sets of abstract polytopes are based on the (small) size of the objects.
@@ -401,22 +433,22 @@ Computed with the help of \lins routine of \magma and published as raw text. The
 
 % The lack of not only datasets but also theoretical constructions of certain symmetry types for polytopes motivates the following objective.
 %
-% \begin{obj}\label{obj:theoreticalConst}
+% \begin{obj}\label{obj:theory}
 % Develop new constructions of highly symmetric polytopes. In particular, focus on the constructions of abstract regular polytopes with given symmetry type to eventually build the corresponding data sets.
 % \end{obj}
 %
-% \cref{obj:theoreticalConst} by itself represents an extremely ambitious and it goes beyond any two year project.
+% \cref{obj:theory} by itself represents an extremely ambitious and it goes beyond any two year project.
 % Any theoretical contribution is already of great interest to the community.
 % However, we strongly believe that in order to really cause an impact on the workflow of research on abstract polytopes all theoretical contributions should be accompanied by its computational analogue.
 %
 % Of course, \ourp  is aimed to become a long term and eventually permanent resource for the community doing research on symmetries of maps and abstract polytopes.
 % This will not be achievable without the involvement of such community.
 %
-% \begin{obj}\label{obj:usage}
+% \begin{obj}\label{obj:longterm}
 % Encourage and motivate both well-established and young researchers to use and contribute to \ourp  so that it eventually becomes the standard way to explore, experiment and publish data sets, routines and computational tools for the development of the research of abstract polytopes.
 % \end{obj}
 %
-%  \cref{obj:usage} is very ambitious and we acknowledge that it depends on the community more that on ourselves, but we strongly believe that our approach and the the current status of the could fit together to fill a gap that has been present for many years now.
+%  \cref{obj:longterm} is very ambitious and we acknowledge that it depends on the community more that on ourselves, but we strongly believe that our approach and the the current status of the could fit together to fill a gap that has been present for many years now.
 % It is important to remark that the community has faced a similar scenario before.
 % Many of the early research on abstract polytopes was collected on the comprehensive manuscript\footcite{McMullenSchulte_2002_AbstractRegularPolytopes}  and nowadays it serves as a natural and standard theoretical reference.
 % Our expectations is that \ourp  eventually becomes the computational analogue for our community.

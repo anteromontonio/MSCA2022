@@ -4,16 +4,156 @@
 \subsection{Quality and effectiveness of the work plan, assessment of risks and appropriateness of the effort assigned to work packages}
 \label{sec:implementationworkplan}
 
-\paragraph{Work package 1 \textit{(24 moths)}.} \textbf{Develop theoretical constructions of non-chiral $2$-orbit polytopes and $k$-orbit polytopes for $k \geq 3$}. This is our main theoretical work plan. The candidate will explore the technique of \emph{operations} to build new polytopes from previously existing polytopes as well as the technique of \emph{extensions} to build new polytopes with prescribed facets.  \emph{Milestone (1.1)} is set for the first 12 months and consist of having the first constructions of families of non regular o chiral polytopes. The success of this task will result on the preparation and submission of at least 2 papers to a high-quality international peer-reviewed journal (\emph{Derivables 1.1 and 1.2}).
-Then the candidate will explore new theoretical constructions \emph{(Milestone 1.2)} which eventually result on the publication of at least one manuscript more (\emph{Derivable 1.3}).
+In the list below \cref{wp:datasets} (Work package 1) is correspondence with \cref{obj:datasets}, \cref{wp:theory} with \cref{obj:theory}, etc. For each item, T stands for \emph{Task}, M for \emph{Milestone} and D for \emph{Derivable}. The number on parentheses after milestones and derivables indicates the expected month to achieve/deliver the item.
 
-\paragraph{Work package 2 \textit{(14 months)}.}
-\textbf{Collect and unify existing datasets of highly symmetric polytopes.}
-First the candidate will collect the existing dataset on a common format (\emph{Milestone 2.1}, 2 months). Then these data will be use to set a FAIR repository (\emph{Milestone 2.2} (4 months) and \emph{Derivable 2.1}).
-Finally the repository will be used to build a website (Derivable 2.2) and corresponding software packages to be used in computer algebra systems such as \gap (Derivable 2.3), \magma (Derivable 2.4) or \sage (Derivable 2.5). This last step is Milestone 2.3 (6 months).
+Since \cref{obj:datasets} and \cref{obj:theory} feed each other, \cref{wp:datasets} and \cref{wp:theory} will run on parallel throughout all the project development. \cref{wp:publish} should run smoothly at the beginning of the project and its progress will depend on the success of \cref{obj:datasets} and \cref{obj:theory} towards the end, while \cref{wp:longterm} will start once  we have some progress to show in \cref{obj:publish}.
 
-\paragraph{Work package 3 \textit{(12 months)}.} \textbf{Develop new datasets of abstract polytopes.} From the success of Work package 1 and the foundations given in Work package 2, the candidate will create new datasets containing both existing (Milestone 3.1, 3 months) and newly constructed (Milestone 3.2, 9 months) highly symmetric polytopes.
-These new datasets will bring an update to the FAIR repository (Derivable 3.1) to the website(Derivable 3.2) and to the software packages (Derivable 3.3).
+\begin{WP}[New datasets of abstract polytopes]\label{wp:datasets}
+\leavevmode
+\begin{description}[font=\color{royalblue}\sffamily]
+
+  \item[T 1.1] Use operations to build \emph{truncations}, \emph{medials} and other classical constructions from the existing datasets of regular and chiral polytopes.
+
+  \item[M 1.1] First dataset containing polytopes with symmetry types other than regular or chiral.
+  \dotfill (4)
+
+  \item[D 1.1] FAIR repository the first dataset of non-regular and non-chiral polytopes.
+  \dotfill (6)
+
+  \item[D 1.2] Update on the website (D2.2) with these new datasets.
+  \dotfill (8)
+
+  \item[T 1.2] Explore known libraries of groups looking for groups to build non-regular and non-chiral polytopes.
+
+  \item[T 1.3] Use extensions to build higher rank new polytopes from those previously known.
+
+  \item[T 1.4] Compute auxiliary Schreier coset graphs of constructed datasets.
+
+  \item[M 1.2] First programming workshop organised. \dotfill (12)
+
+  \item[D 1.3] Update on the repository and the website. \dotfill (14)
+
+  \item[T 1.5] Development of software packages to implement the constructed datasets.
+
+  \item[M 1.3] First version of software packages for the new datasets.
+  \dotfill (18)
+
+  \item[D 1.4] Software packages for the new datasets and documentation to use them publicly available.
+  \dotfill (20)
+
+  \item[T 1.6] Implement other theoretical constructions developed in \cref{wp:theory} to build new datasets.
+
+  \item[M 1.4] Second programming workshop organised
+  \dotfill (22)
+%   \item
+\end{description}
+\end{WP}
+
+\begin{WP}
+[Theoretical constructions of polytopes]
+\label{wp:theory}
+\leavevmode
+\begin{description}[font=\color{royalblue}\sffamily]
+  \item[T 2.1] Use voltage operations to build polytopes with prescribed symmetry type.
+
+  \item[T 2.2] Build extensions of regular and chiral polytopes on the existing datasets and explore the symmetry type possibilities.
+
+  \item[T 2.3] Use Schreier coset graphs to build extensions of polytopes with prescribed symmetry type.
+
+  \item[M 2.1] Give constructions of abstract polytopes with given symmetry type and $2$, $3$ and $4$ orbits.
+  \dotfill (10)
+
+  \item[D 2.1] Research manuscript on extensions of polytopes.
+  \dotfill (12)
+
+  \item[T 2.4] Explore how classic techniques on graph theory can be implemented to build maniplexes and polytopes.
+
+  \item[M 2.2] Construction of highly symmetric maniplexes and polytopes using graph theoretical techniques.
+  \dotfill (20)
+
+  \item[D 2.2] A manuscript on constructions of maniplexes with prescribed symmetry type \dotfill
+  (22)
+%   \item[]
+%   \item[M 3.2]
+%   \item[]
+%   \item[D 3.2]
+\end{description}
+\end{WP}
+
+
+\begin{WP}[Publish and manage datasets of polytopes in a FAIR-ly way]\label{wp:publish}
+\leavevmode
+\begin{description}[font=\color{royalblue}\sffamily]
+  \item[T 3.1] Collect an unify the existing datasets of abstract polytopes.
+  \item[T 3.2] Compute the maniplex associated to each of the polytopes
+  \item[T 3.3] Start building a database of polytopes with the already computed data.
+  \item[T 3.4] Write documentation on how to use our repository.
+  \item[M 3.1] Prepare data and metadata to start building a fair repository. \dotfill (6)
+  \item[D 3.1] First version of a repository including the existing computed datasets of polytopes.
+  \dotfill (10)
+  \item[D 3.2] A website with a web-based version of the computed data.
+  \dotfill (12)
+  \item[D 3.3] Write software packages to improve the user-data interaction.
+  \dotfill (14)
+%   \item[]
+%   \item[]
+%
+\end{description}
+
+
+\end{WP}
+
+
+
+
+
+\begin{WP}[Dissemination of \ourp\ to establish it as a standard]\label{wp:longterm}
+\leavevmode
+\begin{description}[font=\color{royalblue}\sffamily]
+  \item[T 4.1] Prepare a presentation of \ourp\ to introduce it to the community.
+
+  \item[M 4.1] Introduce our project in an international forum.
+  \dotfill (4)
+  \item[T 4.2] Evaluate the feedback obtained in M 4.1 and implement the appropriate changes.
+  \item Prepare an early version of D 2.1 to be tested by the local audience and the external committee.
+  \item[M 4.2] First visit to a member of the external committee.
+  \dotfill (6)
+
+  \item[T 4.3] Establish a web interface to receive feedback from the community
+
+  \item[D 4.1] Publish the web interface in T 4.3
+  \dotfill(12)
+	\item[T 4.3] Work on the implementation of datasets according to the requests of the community.
+	\item[M 4.3] Visit to a member of the external committee
+	\dotfill (18)
+	\item[T 4.4] Write documentation and software packages to allow the users to contribute to \ourp\ .
+  \item[D 4.2] Documentation and software package to allow the community to follow our standards and contribute to our repositories \dotfill (24)
+%   \item[]
+%   \item[]
+%   \item[]
+%   \item[]
+\end{description}
+
+
+\end{WP}
+
+
+% \noindent
+\begin{center}
+\input{source/ganttChart}
+\end{center}
+
+
+% \paragraph{Work package 1 \textit{(24 moths)}.} \textbf{Develop theoretical constructions of non-chiral $2$-orbit polytopes and $k$-orbit polytopes for $k \geq 3$}. This is our main theoretical work plan. The candidate will explore the technique of \emph{operations} to build new polytopes from previously existing polytopes as well as the technique of \emph{extensions} to build new polytopes with prescribed facets.  \emph{Milestone (1.1)} is set for the first 12 months and consist of having the first constructions of families of non regular o chiral polytopes. The success of this task will result on the preparation and submission of at least 2 papers to a high-quality international peer-reviewed journal (\emph{Derivables 1.1 and 1.2}).
+% Then the candidate will explore new theoretical constructions \emph{(Milestone 1.2)} which eventually result on the publication of at least one manuscript more (\emph{Derivable 1.3}).
+%
+% \paragraph{Work package 2 \textit{(14 months)}.}
+% \textbf{Collect and unify existing datasets of highly symmetric polytopes.}
+% First the candidate will collect the existing dataset on a common format (\emph{Milestone 2.1}, 2 months). Then these data will be use to set a FAIR repository (\emph{Milestone 2.2} (4 months) and \emph{Derivable 2.1}).
+% Finally the repository will be used to build a website (Derivable 2.2) and corresponding software packages to be used in computer algebra systems such as \gap (Derivable 2.3), \magma (Derivable 2.4) or \sage (Derivable 2.5). This last step is Milestone 2.3 (6 months).
+%
+% \paragraph{Work package 3 \textit{(12 months)}.} \textbf{Develop new datasets of abstract polytopes.} From the success of Work package 1 and the foundations given in Work package 2, the candidate will create new datasets containing both existing (Milestone 3.1, 3 months) and newly constructed (Milestone 3.2, 9 months) highly symmetric polytopes.
+% These new datasets will bring an update to the FAIR repository (Derivable 3.1) to the website(Derivable 3.2) and to the software packages (Derivable 3.3).
 
 
   % At a minimum, address the following aspects:
@@ -39,8 +179,7 @@ These new datasets will bring an update to the FAIR repository (Derivable 3.1) t
 
 
 
-\noindent
-\input{source/ganttChart}
+
 
 % Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
